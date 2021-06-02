@@ -1,0 +1,45 @@
+package BERRouterAPI;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  BERRouter.Interfaces in 'src\BERRouter.Interfaces.pas',
+  BERRouter.Host in 'src\BERRouter.Host.pas',
+  Exceptions.Types in 'src\Exceptions.Types.pas',
+  BERRouter.Service in 'src\BERRouter.Service.pas',
+  BERRouter in 'src\BERRouter.pas',
+  Component.DictionaryList in 'src\Component.DictionaryList.pas',
+  BERRouter.Host.List in 'src\BERRouter.Host.List.pas',
+  LocalCache4D.Compression in 'src\LocalCache4D.Compression.pas',
+  BERRouter.SubService in 'src\BERRouter.SubService.pas',
+  BERRouter.Factory in 'src\BERRouter.Factory.pas';
+
+end.
